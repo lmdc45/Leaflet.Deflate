@@ -22,6 +22,8 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1
     - name: lint
-      run: npm run lint
+      run: |
+        npm ci
+        npm lint
       env:
         CI: true
