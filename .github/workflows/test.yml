@@ -1,8 +1,8 @@
 on: [push]
 
 jobs:
+  runs-on: ubuntu-latest
   test:
-    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v1
@@ -15,7 +15,6 @@ jobs:
       env:
         CI: true
   lint:
-    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v1
