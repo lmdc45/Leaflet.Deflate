@@ -9,7 +9,9 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1
     - name: test
-      run: npm test
+      run: |
+        npm ci
+        npm test
       env:
         CI: true
     - name: lint
